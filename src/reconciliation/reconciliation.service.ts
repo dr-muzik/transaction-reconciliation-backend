@@ -21,11 +21,10 @@ export class ReconciliationService {
     const amountMismatches: string[] = [];
     const statusMismatches: string[] = [];
 
+    console.log('entered services...');
     // Find transactions in A but missing/mismatched in B
     for (const [id, txnA] of systemAMap.entries()) {
       const txnB = systemBMap.get(id);
-
-      console.log('entered services...');
 
       if (!txnB) {
         missingInB.push(id);
