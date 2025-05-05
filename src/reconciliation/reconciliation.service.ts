@@ -25,6 +25,8 @@ export class ReconciliationService {
     for (const [id, txnA] of systemAMap.entries()) {
       const txnB = systemBMap.get(id);
 
+      console.log('entered services...');
+
       if (!txnB) {
         missingInB.push(id);
       } else {

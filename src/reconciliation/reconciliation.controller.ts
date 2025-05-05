@@ -28,6 +28,8 @@ export class ReconciliationController {
     const fileA = files.fileA?.[0];
     const fileB = files.fileB?.[0];
 
+    console.log('entered controller...');
+
     if (!fileA || !fileB) {
       throw new Error('Both files are required');
     }
