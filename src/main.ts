@@ -5,7 +5,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: 'http://localhost:5173', // allow your frontend
+    origin:
+      'http://localhost:5173, https://transaction-reconciliation-frontend.onrender.com, https://report-discrepancies.vercel.app', // allow your frontend
     methods: 'GET,POST',
     // credentials: true, // only if you're using cookies/auth
   });
